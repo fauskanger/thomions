@@ -1,5 +1,5 @@
 {
-  "name": "evosim",
+  "name": "thomions",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -35,5 +35,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://fauskanger.github.io/evosim"
+  "homepage": "https://fauskanger.github.io/thomions"
 }
