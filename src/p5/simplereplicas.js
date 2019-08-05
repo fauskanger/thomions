@@ -4,8 +4,7 @@ export const simpleReplicas = p => {
     let footerHeight = 0;
 
     p.setup = () => {
-        // p.createCanvas(window.innerWidth, 400);
-        p.createCanvas(window.innerWidth, window.innerHeight - footerHeight - headerHeight - 20);
+        p.createCanvas(window.innerWidth - 10, window.innerHeight - footerHeight - headerHeight - 20);
         p.rectMode(p.CENTER);
         p.textAlign(p.CENTER);
 
@@ -14,6 +13,7 @@ export const simpleReplicas = p => {
 
     p.draw = () => {
         p.fill(200);
+        p.stroke(33);
         p.textSize(25);
         p.text('Work in progress', p.width / 2, p.height / 2 - 50);
         p.textSize(20);
