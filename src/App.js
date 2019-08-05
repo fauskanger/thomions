@@ -3,7 +3,8 @@ import P5Wrapper from 'react-p5-wrapper';
 // import { Helmet } from 'react-helmet';
 // import * as M from 'mathjs';
 
-import { demoSketch } from './p5';
+// import { demoSketch } from './p5';
+import { simpleReplicas } from './p5/simplereplicas';
 import githubLogo from './images/GitHub-Mark-Light-64px.png';
 // import ogImage from './images/thumbnailMandelbrot.png';
 
@@ -64,7 +65,7 @@ class App extends Component {
                 </header>
                 <main ref={e => this.p5Element = e} className="sketch_wrapper">
                     <P5Wrapper
-                        sketch={demoSketch}
+                        sketch={simpleReplicas}
                         { ...sketchState }
                         headerHeight={this.state.headerHeight}
                         footerHeight={this.state.footerHeight}
