@@ -6,11 +6,6 @@ This is a repo to test performance of [p5.js][p5] when used in a replication/evo
 ## Demo
 This is deployed at [fauskanger.github.io/thomions][demo]
 
-## Future work
-
-
-Perhaps more fiddles and diddles will be added in the future.
-
 
 ## Credits
 
