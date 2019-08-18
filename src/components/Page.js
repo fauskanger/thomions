@@ -1,9 +1,11 @@
-import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
+import React, { useLayoutEffect, useRef, useState} from 'react';
 import P5Wrapper from 'react-p5-wrapper';
-// import { Helmet } from 'react-helmet';
+
 
 import { simpleReplicas } from "../p5/simplereplicas";
 import githubLogo from '../images/GitHub-Mark-Light-64px.png';
+import ParametersDialog from "./ParametersDialog";
+import Footer from "./Footer";
 
 
 
@@ -15,21 +17,20 @@ const startSketchState = {
 
 const Page = () => {
 
-    const headerSection = useRef(null);
-    const footerSection = useRef(null);
+    const headerRef = useRef(null);
+    const footerRef = useRef(null);
 
     const [ sketchState, setSketchState ] = useState(startSketchState);
     const [ headerHeight, setHeaderHeight ] = useState(0);
     const [ footerHeight, setFooterHeight ] = useState(0);
-    // const [loading, setLoading] = useState(true);
 
     useLayoutEffect(() => {
-        setHeaderHeight(headerSection.current.scrollHeight);
-        setFooterHeight(footerSection.current.scrollHeight);
+        setHeaderHeight(headerRef.current.scrollHeight);
+        setFooterHeight(footerRef.current.scrollHeight);
     }, [setHeaderHeight, setFooterHeight]);
 
     return (<>
-            <header className="App-header" ref={headerSection}>
+            <header ref={headerRef}>
                 <div className="title">
                     The evolution of Thomions
                 </div>
@@ -51,8 +52,8 @@ const Page = () => {
                     />
                 }
             </main>
-            <footer ref={footerSection}>
-                Footer
+            <footer ref={footerRef}>
+                <Footer />
             </footer>
         </>
     );

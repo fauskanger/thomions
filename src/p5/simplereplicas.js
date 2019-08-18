@@ -4,7 +4,9 @@ export const simpleReplicas = p => {
     let footerHeight = 0;
 
     p.setup = () => {
-        p.createCanvas(window.innerWidth - 10, window.innerHeight - footerHeight - headerHeight - 20);
+        p.createCanvas(
+            window.innerWidth - 10,
+            window.innerHeight - footerHeight - headerHeight - 30);
         p.rectMode(p.CENTER);
         p.textAlign(p.CENTER);
 
